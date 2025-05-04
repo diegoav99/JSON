@@ -22,7 +22,7 @@
         fetch('miOrdenador.json')
     .then(response => response.json())
     .then(ordenador => {
-    document.getElementById("marca").value = Ordenador.marca;
+    document.getElementById("marca").value = ordenador.marca;
     document.getElementById("modelo").value = ordenador.modelo;
     document.getElementById("precio").value = ordenador.precio;
     document.getElementById("color").value = ordenador.color;
