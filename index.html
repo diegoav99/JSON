@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ordenador</h1>
+    <form action="">
+        <p><label for="">Marca: <input type="text" 
+            name="marca" id="marca"></label></p>
+        <p><label for="">Modelo: <input type="text" 
+            name="modelo" id="modelo"></label></p>
+        <p><label for="">Precio: <input type="number" 
+            name="precio" id="precio"></label></p>
+        <p><label for="">Color: <input type="text" 
+            name="color" id="color"></label></p>
+    </form>
+
+   <script>
+        fetch('miOrdenador.json')
+    .then(response => response.json())
+    .then(ordenador => {
+    document.getElementById("marca").value = Ordenador.marca;
+    document.getElementById("modelo").value = ordenador.modelo;
+    document.getElementById("precio").value = ordenador.precio;
+    document.getElementById("color").value = ordenador.color;
+    });
+   </script> 
+</body>
+</html>
